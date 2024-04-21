@@ -29,8 +29,9 @@ rm -rf ./package/istore
 rm -rf ./feeds/kenzo/luci-app-quickstart
 rm -rf ./feeds/kenzo/luci-app-store
 rm -rf ./feeds/kenzo/luci-lib-taskd
+
 #mosdns
 rm -rf feeds/packages/net/mosdns
 rm -rf feeds/luci/applications/luci-app-mosdns
-merge_package https://github.com/sbwml/luci-app-mosdns luci-app-mosdns
-merge_package https://github.com/sbwml/luci-app-mosdns luci-app-mosdns/mosdns
+svn co https://github.com/sbwml/luci-app-mosdns/trunk/mosdns feeds/packages/net/mosdns
+svn co https://github.com/sbwml/luci-app-mosdns/trunk/luci-app-mosdns feeds/luci/applications/luci-app-mosdns
