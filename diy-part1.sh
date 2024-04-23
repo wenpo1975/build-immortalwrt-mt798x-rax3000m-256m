@@ -23,3 +23,6 @@ echo "src-git small https://github.com/kenzok8/small" >> ./feeds.conf.default
 #git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package/luci-theme-infinityfreedom
 #git clone https://github.com/sirpdboy/netspeedtest.git package/netspeedtest
 #git clone https://github.com/sirpdboy/luci-app-poweroffdevice.git package/luci-app-poweroffdevice
+
+git clone https://github.com/gngpp/luci-theme-design.git  package/luci-theme-design
+make menuconfig # choose LUCI->Theme->Luci-theme-design V=s
