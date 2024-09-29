@@ -31,10 +31,10 @@ rm -rf ./feeds/kenzo/luci-app-store
 rm -rf ./feeds/kenzo/luci-lib-taskd
 
 #mosdns
-#rm -rf feeds/packages/net/mosdns
-#rm -rf feeds/luci/applications/luci-app-mosdns
-#merge_package https://github.com/sbwml/luci-app-mosdns luci-app-mosdns
-#merge_package https://github.com/sbwml/luci-app-mosdns luci-app-mosdns/mosdns
+rm -rf feeds/packages/net/mosdns
+rm -rf feeds/luci/applications/luci-app-mosdns
+merge_package https://github.com/sbwml/luci-app-mosdns luci-app-mosdns
+merge_package https://github.com/sbwml/luci-app-mosdns luci-app-mosdns/mosdns
 
 
 
