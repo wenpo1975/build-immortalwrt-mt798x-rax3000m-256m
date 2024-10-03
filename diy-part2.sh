@@ -29,6 +29,7 @@ rm -rf ./package/istore
 rm -rf ./feeds/kenzo/luci-app-quickstart
 rm -rf ./feeds/kenzo/luci-app-store
 rm -rf ./feeds/kenzo/luci-lib-taskd
+rm -rf ./feeds/kenzo/luci-app-wrtbwmon
 
 #mosdns
 # remove v2ray-geodata package from feeds (openwrt-22.03 & master)
