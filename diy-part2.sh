@@ -41,8 +41,8 @@ git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 make menuconfig # choose LUCI -> Applications -> luci-app-mosdns
 make package/mosdns/luci-app-mosdns/compile V=s
 
-#rm -rf feeds/packages/lang/golang
-#git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
 
 #rm -rf feeds/packages/lang/golang
 #git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
