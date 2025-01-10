@@ -32,17 +32,9 @@ rm -rf ./feeds/kenzo/luci-lib-taskd
 rm -rf ./feeds/kenzo/luci-app-wrtbwmon
 
 
-rm -rf feeds/packages/lang/golang
-git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
-
-# drop mosdns and v2ray-geodata packages that come with the source
-find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
-find ./ | grep Makefile | grep mosdns | xargs rm -f
-
-git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
-git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
-make menuconfig # choose LUCI -> Applications -> luci-app-mosdns
-make package/mosdns/luci-app-mosdns/compile V=s
+git clone https://github.com/sbwml/luci-app-openai package/openai
+make menuconfig # choose LUCI -> Applications -> luci-app-openai
+make V=s
 
 #rm -rf feeds/packages/lang/golang
 #git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
