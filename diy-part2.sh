@@ -32,9 +32,9 @@ rm -rf ./feeds/kenzo/luci-lib-taskd
 rm -rf ./feeds/kenzo/luci-app-wrtbwmon
 
 
-git clone https://github.com/sbwml/luci-app-openai package/openai
-make menuconfig # choose LUCI -> Applications -> luci-app-openai
-make V=s
+# git clone https://github.com/sbwml/luci-app-openai package/openai
+# make menuconfig # choose LUCI -> Applications -> luci-app-openai
+# make V=s
 
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
