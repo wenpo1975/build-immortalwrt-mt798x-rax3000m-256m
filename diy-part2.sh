@@ -37,7 +37,7 @@ rm -rf ./feeds/kenzo/luci-app-wrtbwmon
 # make V=s
 
 rm -rf feeds/packages/lang/golang
-git clone https://github.com/sbwml/packages_lang_golang -b 23.4 feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
 
 rm -rf feeds/packages/net/mosdns
 rm -rf feeds/packages/net/v2ray-geodata
