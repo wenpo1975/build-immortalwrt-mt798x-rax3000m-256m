@@ -29,6 +29,9 @@ sudo update-alternatives --config g++
 gcc --version
 g++ --version
 
+#尝试解决gc报错
+apt install clang
+
 
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
