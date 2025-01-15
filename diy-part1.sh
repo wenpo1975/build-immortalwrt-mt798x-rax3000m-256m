@@ -19,6 +19,20 @@
 echo "src-git kenzo https://github.com/kenzok8/openwrt-packages" >> ./feeds.conf.default
 echo "src-git small https://github.com/kenzok8/small" >> ./feeds.conf.default
 #echo "src-git OpenClash https://github.com/vernesong/OpenClash.git" >> ./feeds.conf.default
+echo "src-git homeproxy https://github.com/immortalwrt/homeproxy" >> ./feeds.conf.default
+
+
+#删除冲突的软件包homeproxy
+rm -rf ./feeds/small/luci-app-homeproxy
+rm -rf ./feeds/small/sing-box
+
+
+#删除冲突的软件包
+rm -rf ./package/istore
+rm -rf ./feeds/kenzo/luci-app-quickstart
+rm -rf ./feeds/kenzo/luci-app-store
+rm -rf ./feeds/kenzo/luci-lib-taskd
+
 
 #添加额外软件包
 #git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
