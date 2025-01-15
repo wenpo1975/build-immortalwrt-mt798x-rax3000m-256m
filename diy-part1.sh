@@ -10,27 +10,6 @@
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
 
-# 添加PPA源
-sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-sudo apt update
-
-# 安装最新的GCC（假设为GCC 11）
-sudo apt install gcc-11 g++-11
-
-# 设置默认版本
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 100
-sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-11 100
-
-# 配置默认版本
-sudo update-alternatives --config gcc
-sudo update-alternatives --config g++
-
-# 验证安装
-gcc --version
-g++ --version
-
-#尝试解决gc报错
-apt install clang
 
 
 # Uncomment a feed source
