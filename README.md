@@ -1,7 +1,9 @@
 # immortalwrt-mt7981-rax3000m_nand_256m 云编译仓库
 
 支持的硬件
-#Nokia ea0326gmp #CMCC RAX3000M #CMCC RAX3000M-256
+#Nokia ea0326gmp 
+#CMCC RAX3000M 
+#CMCC RAX3000M-256
 * 感谢P3TERX,hanwckf,padavanonly,kenzo等大佬。
 * 登陆IP:192.168.6.1
   密码：空
