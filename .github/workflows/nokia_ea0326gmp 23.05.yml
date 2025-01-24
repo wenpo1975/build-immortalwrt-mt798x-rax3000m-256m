@@ -143,6 +143,9 @@ jobs:
         tag: "${{ env.DEVICE }}--${{ env.FILE_DATE }}"
         artifacts: "openwrt/bin/targets/*/*/*"
         body: |
-          # 未测试×
-          
-          IP: 192.168.5.1 | Password: none
+
+          IP: 192.168.6.1 | Password: none
+          #nokia #ea0326gmp
+          #immortalwrt-mt798x-23.05 LuCI openwrt-23.05 
+          #Linux 5.4.255
+          #homeproxy #ddns-go #fakemesh
