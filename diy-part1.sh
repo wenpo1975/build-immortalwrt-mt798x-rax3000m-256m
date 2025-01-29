@@ -23,10 +23,10 @@ echo "src-git small https://github.com/kenzok8/small-package" >> ./feeds.conf.de
 #echo "src-git fakemesh https://github.com/kenzok8/small-package/tree/main/luci-app-fakemesh" >> ./feeds.conf.default
 
 #删除冲突的软件包homeproxy
-rm -rf ./feeds/small/luci-app-homeproxy
-rm -rf ./feeds/small/sing-box
-git clone https://github.com/immortalwrt/homeproxy package/homeproxy
-git clone https://github.com/kenzok8/small-package/tree/main/luci-app-fakemesh package/fakemesh
+#rm -rf ./feeds/small/luci-app-homeproxy
+#rm -rf ./feeds/small/sing-box
+#git clone https://github.com/immortalwrt/homeproxy package/homeproxy
+#git clone https://github.com/kenzok8/small-package/tree/main/luci-app-fakemesh package/fakemesh
 
 
 
