@@ -29,8 +29,8 @@
 #git clone https://github.com/kenzok8/small-package/tree/main/luci-app-fakemesh package/fakemesh
 
 #golang
-rm -rf feeds/packages/lang/golang
-git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
+#rm -rf feeds/packages/lang/golang
+#git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
 
 
 
