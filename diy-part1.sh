@@ -32,6 +32,27 @@
 #rm -rf feeds/packages/lang/golang
 #git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
 
+#Full Cone 补丁
+FW4_PATCH="package/network/config/firewall4/patches/001-firewall4-add-support-for-fullcone-nat.patch"
+
+rm -f \
+  package/network/config/firewall4/patches/001-firewall4-disable-full-cone.patch \
+  "$FW4_PATCH"
+
+curl -fL --retry 3 \
+  "https://raw.githubusercontent.com/padavanonly/immortalwrt-mt798x-6.6/4ffcb16a05c5aaa7cf10c3bc19e4ec65e0d93a0c/package/network/config/firewall4/patches/001-firewall4-add-support-for-fullcone-nat.patch" \
+  -o "$FW4_PATCH"
+
+grep -q 'option fullcone' "$FW4_PATCH" || {
+  echo "恢复 firewall4 Full Cone 补丁失败"
+  exit 1
+}
+
+
+./scripts/config --enable PACKAGE_kmod-nft-fullcone
+./scripts/config --disable PACKAGE_kmod-ipt-fullconenat
+./scripts/config --disable PACKAGE_iptables-mod-fullconenat
+
 
 
 
