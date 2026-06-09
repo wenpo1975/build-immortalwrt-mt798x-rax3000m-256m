@@ -25,11 +25,11 @@ env:
   REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-6.6
   REPO_BRANCH: openwrt-24.10-6.6
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: ea0326gmp2305.config
+  CONFIG_FILE: ea0326gmp2410.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   TZ: Asia/Shanghai
-  DEVICE: nokia_e0326gmp
+  DEVICE: nokia_ea0326gmp
   UPLOAD_OUTPUT: true
 
 jobs:
