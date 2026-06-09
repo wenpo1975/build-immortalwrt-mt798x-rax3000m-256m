@@ -49,10 +49,6 @@ grep -q 'option fullcone' "$FW4_PATCH" || {
 }
 
 
-./scripts/config --enable PACKAGE_kmod-nft-fullcone
-./scripts/config --disable PACKAGE_kmod-ipt-fullconenat
-./scripts/config --disable PACKAGE_iptables-mod-fullconenat
-
 
 
 
