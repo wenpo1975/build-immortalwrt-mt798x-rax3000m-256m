@@ -24,6 +24,22 @@ sed -i 's/192.168.1.1/192.168.5.1/g' package/base-files/files/bin/config_generat
 #sed -i 's/<0x580000 0x7200000>/<0x580000 0xee00000>/g' target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-cmcc-rax3000m.dts
 #sed -i 's/116736k/240128k/g' target/linux/mediatek/image/mt7981.mk
 
+# 给 libxcrypt 加 --disable-werror，关闭“warning 当 error”。 额外加 -Wno-error=format-nonliteral，精准放过这次触发的 warning。
+# Fix libxcrypt 4.4.36 with GCC 13 + musl fortify
+awk '
+/^CONFIGURE_ARGS \+=/ && !added_werror {
+  print
+  print "\t--disable-werror \\"
+  added_werror=1
+  next
+}
+/BuildPackage,libxcrypt/ && !added_cflags {
+  print "TARGET_CFLAGS += -Wno-error=format-nonliteral"
+  added_cflags=1
+}
+{ print }
+' feeds/packages/libs/libxcrypt/Makefile > /tmp/libxcrypt.mk
+mv /tmp/libxcrypt.mk feeds/packages/libs/libxcrypt/Makefile
 
 
 
